@@ -1,0 +1,64 @@
+body{
+    background-color: #333;
+    font-family: Arial, sans-serif;
+}
+#address_type{
+    margin-right:8px;
+    background-color: #f4ede7;
+    padding: 0 8px;
+    border-radius: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-align:right;
+    font-size:12px;
+    float:right;
+    width:230px;
+}
+
+#CheckoutStepShippingProvider{
+    width:640px;
+    background-color: #f4ede7;
+    padding:8px;
+}
+
+#shipping_loader{
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+    color:#b2673f;
+}
+#shipping_loader img{
+    vertical-align:middle;
+}
+.ShippingProviderList li{
+    display:none;
+}
+.ShippingContinueButton{
+    display:none;
+    padding:12px;
+}
+input[type=radio]{
+    display:inline-block;
+    *display:inline-block;
+    zoom:1;
+}
+.ShipperPrice{
+    margin-left:24px;
+    font-style:normal;
+    font-size:12px;
+    opacity:.75;
+}
+.ShippingContinueButton{
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(177, 199, 97)), to(rgb(168, 212, 51)));
+    border-bottom-color: rgb(134, 154, 25);
+    font-weight:bold;
+    color:#FFF;
+}
+label{
+    font-weight:bold;
+    font-size:14px;
+}
+
+ul{
+    list-style:none;
+}

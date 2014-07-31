@@ -1,0 +1,113 @@
+<html>
+<head>
+  <link type="text/css" href="checkout.css" rel="stylesheet"/>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="checkout.js"></script>
+</head>
+<body>
+
+<div id="CheckoutStepShippingProvider">
+  <h3 class="ExpressCheckoutTitle">
+    4. Shipping Method
+  </h3>
+
+  <div class="ExpressCheckoutContent">
+    <form method="post" action="#" id="choose_shipper">
+      <div id="address_type">
+        <span class="ShippingEstimateInfo">
+          Dates based on a <b>residential</b> address<br>
+        </span>
+        Questions? Call us
+    <span class="Link Highlight">
+      1-866-902-7260
+    </span>
+      </div>
+      <p id="choose_shipping_instructions">
+        When would you like to have your <b>order arrive</b>?
+      </p>
+
+      <p id="shipping_loader">
+        <img src="small-loader.gif">
+        Checking Shipping Times
+      </p>
+
+      <div class="shippingquote"><p style="display: none">
+        <strong>Shipped to:</strong>
+      </p>
+
+        <div class="ShippingItemList PL20" style="display: none">
+          <p><em><strong>Items:</strong></em></p>
+          <ul>
+
+          </ul>
+          <p><em><strong>Choose a Shipping Method:</strong></em></p>
+        </div>
+        <ul class="ShippingProviderList">
+          <li>
+            <label id="shippingMethod_53d9716af2a09_4">
+              <input type="radio"
+                     name="selectedShippingMethod"
+                     value="4"
+                     class="ShippingMethodOption"
+                     style=""
+                     checked="checked">
+              <span class="ShipperName" data-fallback-service="true" data-ship-service="GROUND_HOME_DELIVERY">FedEx (1 to 5 Business Days)</span><br>
+              <em class="ShipperPrice ProductPrice">$9.78 via FedEx (Ground Home Delivery)</em>
+            </label>
+          </li>
+          <li>
+            <label id="shippingMethod_53d9716af2a09_3">
+              <input type="radio" name="selectedShippingMethod"
+                     value="3" class="ShippingMethodOption" style="display:inline-block;*display:inline-block;zoom:1;">
+              <span class="ShipperName" data-fallback-service="true" data-ship-service="FEDEX_EXPRESS_SAVER">FedEx (3 Business Days)</span><br>
+              <em class="ShipperPrice ProductPrice">$12.54 via FedEx (FedEx Express Saver)</em>
+            </label>
+          </li>
+          <li>
+            <label id="shippingMethod_53d9716af2a09_2">
+              <input type="radio" name="selectedShippingMethod"
+                     value="2" class="ShippingMethodOption" style="display:inline-block;*display:inline-block;zoom:1;">
+              <span class="ShipperName" data-fallback-service="true" data-ship-service="FEDEX_2_DAY">FedEx (2 Business Days)</span><br>
+              <em class="ShipperPrice ProductPrice">$12.70 via FedEx (FedEx 2 Day)</em>
+            </label>
+          </li>
+          <li>
+            <label id="shippingMethod_53d9716af2a09_1">
+              <input type="radio" name="selectedShippingMethod"
+                     value="1" class="ShippingMethodOption" style="display:inline-block;*display:inline-block;zoom:1;">
+              <span class="ShipperName" data-fallback-service="true" data-ship-service="STANDARD_OVERNIGHT">FedEx (Weekday Overnight Only)</span><br>
+              <em class="ShipperPrice ProductPrice">$14.95 via FedEx (Standard Overnight)</em>
+            </label>
+          </li>
+          <li>
+            <label id="shippingMethod_53d9716af2a09_0">
+              <input type="radio" name="selectedShippingMethod"
+                     value="0" class="ShippingMethodOption" style="display:inline-block;*display:inline-block;zoom:1;">
+              <span class="ShipperName" data-fallback-service="true" data-ship-service="PRIORITY_OVERNIGHT">FedEx (Overnight Including Saturday)</span><br>
+              <em class="ShipperPrice ProductPrice">$15.22 via FedEx (Priority Overnight)</em>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <input type="submit" class="ShippingContinueButton" value="Continue">
+      </div>
+
+
+    </form>
+  </div>
+</div>
+<script>
+  $(function(){
+    $("#choose_shipper").submit(function(){
+      alert("User selected arrival " +
+          $("[type='radio']:checked").next().text() +
+          "\n(Option " + $("[type='radio']:checked").val() + ")"
+      );
+      return false;
+    });
+  })
+</script>
+</body>
+</html>
